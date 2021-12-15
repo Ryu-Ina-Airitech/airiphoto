@@ -7,7 +7,7 @@
     }
   },
   "api": {
-    "api943c79ba": {
+    "sampleapi": {
       "service": "API Gateway",
       "providerPlugin": "awscloudformation",
       "dependsOn": [
