@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-airiphoto-dev-110010-authRole",
+      "UnauthRoleArn": "arn:aws:iam::475467959527:role/amplify-airiphoto-dev-110010-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::475467959527:role/amplify-airiphoto-dev-110010-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-airiphoto-dev-110010-deployment",
+      "UnauthRoleName": "amplify-airiphoto-dev-110010-unauthRole",
+      "StackName": "amplify-airiphoto-dev-110010",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:475467959527:stack/amplify-airiphoto-dev-110010/c0807590-5d4a-11ec-b411-0ad798534a83",
+      "AmplifyAppId": "d1myonbmsimzj4"
+    }
+  }
+}
