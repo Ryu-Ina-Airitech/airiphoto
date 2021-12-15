@@ -11,5 +11,18 @@
       "StackId": "arn:aws:cloudformation:ap-northeast-1:475467959527:stack/amplify-airiphoto-dev-110010/c0807590-5d4a-11ec-b411-0ad798534a83",
       "AmplifyAppId": "d1myonbmsimzj4"
     }
+  },
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-airiphoto-staging-120701-authRole",
+      "UnauthRoleArn": "arn:aws:iam::475467959527:role/amplify-airiphoto-staging-120701-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::475467959527:role/amplify-airiphoto-staging-120701-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-airiphoto-staging-120701-deployment",
+      "UnauthRoleName": "amplify-airiphoto-staging-120701-unauthRole",
+      "StackName": "amplify-airiphoto-staging-120701",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:475467959527:stack/amplify-airiphoto-staging-120701/13e12140-5d54-11ec-b325-0616a1c70b31",
+      "AmplifyAppId": "d1myonbmsimzj4"
+    }
   }
 }
