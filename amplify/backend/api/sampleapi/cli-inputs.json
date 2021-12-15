@@ -1,8 +1,8 @@
 {
   "version": 1,
   "paths": {
-    "/sample-api": {
-      "name": "/sample-api",
+    "/sampleapi": {
+      "name": "/sampleapi",
       "lambdaFunction": "sampleapi",
       "permissions": {
         "setting": "open"
