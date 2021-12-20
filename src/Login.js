@@ -44,9 +44,9 @@ import {
               <main>
                 <h1>Hello {user.username}</h1>
                 <button onClick={signOut}>Sign out</button>
+                <input type="file" onChange={uploadPhoto} />
               </main>
             )}
-            <input type="file" onChange={uploadPhoto} />;
           </Authenticator>
         </Flex>
       </Grid>
