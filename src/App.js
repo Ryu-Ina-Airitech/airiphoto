@@ -1,5 +1,5 @@
 import { useAuthenticator } from "@aws-amplify/ui-react";
-import { Amplify } from "aws-amplify";
+import Amplify, { Storage } from 'aws-amplify';
 
 import { Home } from "./Home";
 import { Login } from "./Login";
@@ -18,7 +18,6 @@ export async function uploadPhoto(e) {
     console.log("Error uploading file: ", error);
   }
 }
-
 
 export default function App() {
   const { user } = useAuthenticator();
