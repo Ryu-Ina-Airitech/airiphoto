@@ -11,6 +11,7 @@ import {
   import { Footer } from "./Footer";
   import { SignInHeader } from "./SignInHeader";
   import { SignInFooter } from "./SignInFooter";
+  import { uploadPhoto } from "./App";
   
   const components = {
     // Header,
@@ -45,6 +46,7 @@ import {
                 <button onClick={signOut}>Sign out</button>
               </main>
             )}
+            <input type="file" onChange={uploadPhoto} />;
           </Authenticator>
         </Flex>
       </Grid>
