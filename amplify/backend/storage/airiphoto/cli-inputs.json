@@ -1,0 +1,14 @@
+{
+  "resourceName": "airiphoto",
+  "policyUUID": "3ccd2286",
+  "bucketName": "airiphotocontentbucket",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "S3Trigger8a5bf1b7",
+  "groupAccess": {}
+}
