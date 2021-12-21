@@ -32,7 +32,7 @@ export type AmplifyDependentResourcesAttributes = {
         }
     },
     "api": {
-        ampleapi: {
+        sampleapi: {
             RootUrl: "string";
             ApiName: "string";
             ApiId: "string";
