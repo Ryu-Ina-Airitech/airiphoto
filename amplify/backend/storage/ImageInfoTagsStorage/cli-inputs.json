@@ -1,0 +1,10 @@
+{
+  "resourceName": "ImageInfoTagsStorage",
+  "tableName": "ImageInfo-Tags",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

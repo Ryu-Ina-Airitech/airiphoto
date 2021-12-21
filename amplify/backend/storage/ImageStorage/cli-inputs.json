@@ -1,0 +1,10 @@
+{
+  "resourceName": "ImageStorage",
+  "tableName": "ImageInfo",
+  "partitionKey": {
+    "fieldName": "img_id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

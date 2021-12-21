@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "paths": {
+    "/user": {
+      "name": "/user",
+      "lambdaFunction": "UserOperationApiFunction",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/image": {
+      "name": "/image",
+      "lambdaFunction": "ImageOperationApiFunction",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/image/tag": {
+      "name": "/image/tag",
+      "lambdaFunction": "ImageTagsNameOperationApiFunction",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/image/imageinfotag": {
+      "name": "/image/imageinfotag",
+      "lambdaFunction": "ImageInfoTagOperationApiFunction",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
