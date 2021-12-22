@@ -1,11 +1,17 @@
 export type AmplifyDependentResourcesAttributes = {
     "function": {
-        sampleapi: {
-        Name: "string";
-        Arn: "string";
-        Region: "string";
-        LambdaExecutionRole: "string";
-      },
+        "sampleapi": {
+            "Name": "string";
+            "Arn": "string";
+            "Region": "string";
+            "LambdaExecutionRole": "string";
+        },
+        "S3Trigger8a5bf1b7": {
+            "Name": "string",
+            "Arn": "string",
+            "Region": "string",
+            "LambdaExecutionRole": "string"
+        }
         "UserOperationApiFunction": {
             "Name": "string",
             "Arn": "string",
@@ -32,10 +38,10 @@ export type AmplifyDependentResourcesAttributes = {
         }
     },
     "api": {
-        sampleapi: {
-            RootUrl: "string";
-            ApiName: "string";
-            ApiId: "string";
+        "sampleapi": {
+            "RootUrl": "string";
+            "ApiName": "string";
+            "ApiId": "string";
           },
         "photostockapi": {
             "RootUrl": "string",
@@ -43,7 +49,22 @@ export type AmplifyDependentResourcesAttributes = {
             "ApiId": "string"
         }
     },
+    "auth": {
+        "airiphotofb50055a": {
+            "IdentityPoolId": "string",
+            "IdentityPoolName": "string",
+            "UserPoolId": "string",
+            "UserPoolArn": "string",
+            "UserPoolName": "string",
+            "AppClientIDWeb": "string",
+            "AppClientID": "string"
+        }
+    },
     "storage": {
+        "airiphoto": {
+            "BucketName": "string",
+            "Region": "string"
+        },
         "UserStorage": {
             "Name": "string",
             "Arn": "string",
@@ -76,16 +97,5 @@ export type AmplifyDependentResourcesAttributes = {
             "PartitionKeyType": "string",
             "Region": "string"
         }
-    },
-    auth: {
-        airiphotofb50055a: {
-          IdentityPoolId: "string";
-          IdentityPoolName: "string";
-          UserPoolId: "string";
-          UserPoolArn: "string";
-          UserPoolName: "string";
-          AppClientIDWeb: "string";
-          AppClientID: "string";
-        };
-      };
+    }
 };

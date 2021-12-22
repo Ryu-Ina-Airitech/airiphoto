@@ -5,6 +5,11 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
+    "S3Trigger8a5bf1b7": {
+      "service": "Lambda",
+      "providerPlugin": "awscloudformation",
+      "build": true
+    },
     "UserOperationApiFunction": {
       "build": true,
       "providerPlugin": "awscloudformation",
