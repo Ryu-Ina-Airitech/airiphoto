@@ -11,7 +11,7 @@ import {
   import { Footer } from "./Footer";
   import { SignInHeader } from "./SignInHeader";
   import { SignInFooter } from "./SignInFooter";
-  
+    
   const components = {
     // Header,
     SignIn: {

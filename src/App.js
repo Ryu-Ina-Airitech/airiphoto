@@ -1,5 +1,5 @@
 import { useAuthenticator } from "@aws-amplify/ui-react";
-import { Amplify } from "aws-amplify";
+import Amplify from 'aws-amplify';
 
 import { Home } from "./Home";
 import { Login } from "./Login";

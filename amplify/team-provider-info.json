@@ -50,5 +50,33 @@
         "airiphotofb50055a": {}
       }
     }
+  },
+  "devstorage": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-airiphoto-devstorage-104211-authRole",
+      "UnauthRoleArn": "arn:aws:iam::475467959527:role/amplify-airiphoto-devstorage-104211-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::475467959527:role/amplify-airiphoto-devstorage-104211-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-airiphoto-devstorage-104211-deployment",
+      "UnauthRoleName": "amplify-airiphoto-devstorage-104211-unauthRole",
+      "StackName": "amplify-airiphoto-devstorage-104211",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:475467959527:stack/amplify-airiphoto-devstorage-104211/0dd824c0-6136-11ec-ab5b-0e5be759ac01",
+      "AmplifyAppId": "d1myonbmsimzj4"
+    },
+    "categories": {
+      "function": {
+        "sampleapi": {
+          "deploymentBucketName": "amplify-airiphoto-devstorage-104211-deployment",
+          "s3Key": "amplify-builds/sampleapi-77564b6c467749593942-build.zip"
+        },
+        "S3Trigger8a5bf1b7": {
+          "deploymentBucketName": "amplify-airiphoto-devstorage-104211-deployment",
+          "s3Key": "amplify-builds/S3Trigger8a5bf1b7-7a635870545637724f51-build.zip"
+        }
+      },
+      "auth": {
+        "airiphotofb50055a": {}
+      }
+    }
   }
 }
