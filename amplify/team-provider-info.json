@@ -139,11 +139,11 @@
         },
         "ImageTagsNameOperationApiFunction": {
           "deploymentBucketName": "amplify-airiphoto-deveieimon-233626-deployment",
-          "s3Key": "amplify-builds/ImageTagsNameOperationApiFunction-76775744614d32316a61-build.zip"
+          "s3Key": "amplify-builds/ImageTagsNameOperationApiFunction-6a5167466f394141506b-build.zip"
         },
         "ImageInfoTagOperationApiFunction": {
           "deploymentBucketName": "amplify-airiphoto-deveieimon-233626-deployment",
-          "s3Key": "amplify-builds/ImageInfoTagOperationApiFunction-6e5545794e33335a3833-build.zip"
+          "s3Key": "amplify-builds/ImageInfoTagOperationApiFunction-536d4a2f6531727a7962-build.zip"
         }
       }
     }
