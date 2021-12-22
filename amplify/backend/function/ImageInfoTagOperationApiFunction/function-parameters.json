@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "storage": {
+      "UserStorage": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "ImageStorage": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "ImageInfoTagsStorage": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "TagsStorage": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

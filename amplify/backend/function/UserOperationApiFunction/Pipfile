@@ -1,17 +1,12 @@
 [[source]]
+name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
-name = "pypi"
-
-[packages]
-aws-wsgi = "*"
-boto3 = "*"
-flask = "*"
-flask-cors = "*"
 
 [dev-packages]
-flake8 = "*"
-autopep8 = "*"
+
+[packages]
+src = {editable = true, path = "./src"}
 
 [requires]
 python_version = "3.8"

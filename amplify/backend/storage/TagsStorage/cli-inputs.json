@@ -1,0 +1,10 @@
+{
+  "resourceName": "TagsStorage",
+  "tableName": "TagNames",
+  "partitionKey": {
+    "fieldName": "tag_id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
