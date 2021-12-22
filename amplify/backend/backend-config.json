@@ -9,6 +9,99 @@
       "service": "Lambda",
       "providerPlugin": "awscloudformation",
       "build": true
+    },
+    "UserOperationApiFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "storage",
+          "resourceName": "UserStorage",
+          "attributes": ["Name", "Arn", "StreamArn"]
+        }
+      ]
+    },
+    "ImageOperationApiFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "storage",
+          "resourceName": "UserStorage",
+          "attributes": ["Name", "Arn", "StreamArn"]
+        },
+        {
+          "category": "storage",
+          "resourceName": "ImageStorage",
+          "attributes": ["Name", "Arn", "StreamArn"]
+        },
+        {
+          "category": "storage",
+          "resourceName": "ImageInfoTagsStorage",
+          "attributes": ["Name", "Arn", "StreamArn"]
+        },
+        {
+          "category": "storage",
+          "resourceName": "TagsStorage",
+          "attributes": ["Name", "Arn", "StreamArn"]
+        }
+      ]
+    },
+    "ImageTagsNameOperationApiFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "storage",
+          "resourceName": "UserStorage",
+          "attributes": ["Name", "Arn", "StreamArn"]
+        },
+        {
+          "category": "storage",
+          "resourceName": "ImageStorage",
+          "attributes": ["Name", "Arn", "StreamArn"]
+        },
+        {
+          "category": "storage",
+          "resourceName": "ImageInfoTagsStorage",
+          "attributes": ["Name", "Arn", "StreamArn"]
+        },
+        {
+          "category": "storage",
+          "resourceName": "TagsStorage",
+          "attributes": ["Name", "Arn", "StreamArn"]
+        }
+      ]
+    },
+    "ImageInfoTagOperationApiFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "storage",
+          "resourceName": "UserStorage",
+          "attributes": ["Name", "Arn", "StreamArn"]
+        },
+        {
+          "category": "storage",
+          "resourceName": "ImageStorage",
+          "attributes": ["Name", "Arn", "StreamArn"]
+        },
+        {
+          "category": "storage",
+          "resourceName": "ImageInfoTagsStorage",
+          "attributes": ["Name", "Arn", "StreamArn"]
+        },
+        {
+          "category": "storage",
+          "resourceName": "TagsStorage",
+          "attributes": ["Name", "Arn", "StreamArn"]
+        }
+      ]
     }
   },
   "api": {
@@ -26,6 +119,32 @@
         }
       ]
     }
+  },
+  "photostockapi": {
+    "service": "API Gateway",
+    "providerPlugin": "awscloudformation",
+    "dependsOn": [
+      {
+        "category": "function",
+        "resourceName": "UserOperationApiFunction",
+        "attributes": ["Name", "Arn"]
+      },
+      {
+        "category": "function",
+        "resourceName": "ImageOperationApiFunction",
+        "attributes": ["Name", "Arn"]
+      },
+      {
+        "category": "function",
+        "resourceName": "ImageTagsNameOperationApiFunction",
+        "attributes": ["Name", "Arn"]
+      },
+      {
+        "category": "function",
+        "resourceName": "ImageInfoTagOperationApiFunction",
+        "attributes": ["Name", "Arn"]
+      }
+    ]
   },
   "auth": {
     "airiphotofb50055a": {
@@ -53,6 +172,13 @@
           "EMAIL"
         ]
       }
+    },
+    "airiphoto54f7af2f": {
+      "service": "Cognito",
+      "serviceType": "imported",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
     }
   },
   "storage": {
@@ -60,6 +186,22 @@
       "service": "S3",
       "providerPlugin": "awscloudformation",
       "dependsOn": []
+    },
+    "UserStorage": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    },
+    "ImageStorage": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    },
+    "ImageInfoTagsStorage": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    },
+    "TagsStorage": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
     }
   }
 }
