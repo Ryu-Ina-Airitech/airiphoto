@@ -11,8 +11,7 @@ import {
   import { Footer } from "./Footer";
   import { SignInHeader } from "./SignInHeader";
   import { SignInFooter } from "./SignInFooter";
-  import { uploadPhoto } from "./App";
-  
+    
   const components = {
     // Header,
     SignIn: {
@@ -44,7 +43,6 @@ import {
               <main>
                 <h1>Hello {user.username}</h1>
                 <button onClick={signOut}>Sign out</button>
-                <input type="file" onChange={uploadPhoto} />
               </main>
             )}
           </Authenticator>
