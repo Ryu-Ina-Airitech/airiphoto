@@ -15,7 +15,7 @@ CORS(app)
 
 
 @app.route(BASE_ROUTE + '/register', methods=['POST'])
-# タッグ情報登録処理
+# タグ情報登録処理
 def register_taginfo():
     request_json = request.get_json()
     client.put_item(TableName=TABLE, Item={
@@ -26,7 +26,7 @@ def register_taginfo():
 
 
 @app.route(BASE_ROUTE + '/<tag_id>/get', methods=['GET'])
-# タッグ情報取得処理
+# タグ情報取得処理
 def get_taginfo(tag_id):
     tag = client.get_item(TableName=TABLE, Key={
         'tag_id': {'S': tag_id}})
@@ -34,7 +34,7 @@ def get_taginfo(tag_id):
 
 
 @app.route(BASE_ROUTE + '/<tag_id>/delete', methods=['DELETE'])
-# タッグ削除処理
+# タグ削除処理
 def delete_tag(tag_id):
     client.delete_item(TableName=TABLE, Key={
         'tag_id': {
@@ -45,7 +45,7 @@ def delete_tag(tag_id):
 
 
 @app.route(BASE_ROUTE + '/<tag_id>/update', methods=['PUT'])
-# タッグ情報更新処理
+# タグ情報更新処理
 def update_tag(tag_id):
     client.update_item(TableName=TABLE,
                        Key={'tag_id': {'S': tag_id}},
@@ -60,7 +60,7 @@ def update_tag(tag_id):
 
 
 @app.route(BASE_ROUTE + '/tagnamelist', methods=['GET'])
-# タッグ名リスト取得
+# タグ名リスト取得
 def list_tags():
     return jsonify(data=client.scan(TableName=TABLE))
 
