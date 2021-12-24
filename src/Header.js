@@ -1,5 +1,5 @@
 // import { useTheme } from "@aws-amplify/ui-react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./Home";
 import { Login } from "./Login";
 import { Profile } from "./Profile";
@@ -76,7 +76,7 @@ export function Header() {
           </ul>
         </div>
       </nav>
-      <Switch>
+      <Routes>
         <Route path="/Home">
           <Home />
         </Route>
@@ -89,7 +89,7 @@ export function Header() {
         <Route path="/Profile">
           <Profile />
         </Route>
-      </Switch>
+      </Routes>
     </BrowserRouter>
   );
 }

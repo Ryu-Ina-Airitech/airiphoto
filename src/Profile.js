@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ProfileEditor } from "./ProfileEditor";
 
 export function Profile() {
@@ -74,11 +74,11 @@ export function Profile() {
           </div>
         </div>
       </div>
-      <Switch>
+      <Routes>
         <Route path="/ProfileEditor">
           <ProfileEditor />
         </Route>
-      </Switch>
+      </Routes>
     </BrowserRouter>
   );
 }
