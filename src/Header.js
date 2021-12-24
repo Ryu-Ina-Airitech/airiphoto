@@ -1,13 +1,18 @@
 // import { useTheme } from "@aws-amplify/ui-react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Home } from "./Home";
+import { Login } from "./Login";
+import { Profile } from "./Profile";
+import { UploadView } from "./uploadView";
 
 export function Header() {
   // const { tokens } = useTheme();
 
   return (
-    <header>
+    <BrowserRouter>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="./Home.js">
+          <a className="navbar-brand" href="/Home">
             <img
               src="https://c.pxhere.com/images/7e/83/9874c16b50d549e89d9fc4bbb60f-1448913.jpg!d"
               alt="Logo"
@@ -37,32 +42,32 @@ export function Header() {
                 aria-labelledby="navbarDropdown"
               >
                 <li>
-                  <a className="dropdown-item" href="./Profile.js">
+                  <a className="dropdown-item" href="/Profile">
                     プロフィール
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="./Favorite.js">
+                  <a className="dropdown-item" href="/Favorite">
                     お気に入り画像
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="./Upload.js">
+                  <a className="dropdown-item" href="/UploadView">
                     アップロード
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="./">
+                  <a className="dropdown-item" href="/MyPhoto">
                     自分の画像
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="./Help.js">
+                  <a className="dropdown-item" href="/Help">
                     ヘルプ
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="./Login.js">
+                  <a className="dropdown-item" href="/Login">
                     ログアウト
                   </a>
                 </li>
@@ -71,6 +76,20 @@ export function Header() {
           </ul>
         </div>
       </nav>
-    </header>
+      <Switch>
+        <Route path="/Home">
+          <Home />
+        </Route>
+        <Route path="/Login">
+          <Login />
+        </Route>
+        <Route path="/UploadView">
+          <UploadView />
+        </Route>
+        <Route path="/Profile">
+          <Profile />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
