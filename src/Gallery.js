@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Flex } from "@aws-amplify/ui-react";
+//import { Flex } from "@aws-amplify/ui-react";
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
@@ -58,7 +58,6 @@ class Gallery extends React.Component {
   }
 
   renderImage(imageUrl) {
-    const { classes } = this.props;
     return (
         <div className='row' style={{display: 'flex',justifyContent: 'space-between',
          backgroundColor: '#ecf0f1',
@@ -69,6 +68,7 @@ class Gallery extends React.Component {
                     src={imageUrl}
                     onLoad={this.handleImageChange}
                     onError={this.handleImageChange}
+                    alt=""
                     />
                 </Typography>
             </CardContent>
