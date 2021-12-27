@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { useAuthenticator } from "@aws-amplify/ui-react";
 import Amplify from "aws-amplify";
 
-import { Home } from "./Home";
+import  Home  from "./Home";
 import { Login } from "./Login";
 import "./styles.css";
 import { Navigate, Outlet } from "react-router-dom";
@@ -23,20 +23,25 @@ const PrivateRoute = () => {
 export default function App() {
   const { user } = useAuthenticator();
 
-  if (user) {
-    return (
-      <BrowserRouter>
-        <Fragment>
-          <Routes>
-            <Route path="/" element={<PrivateRoute />}>
-              <Route path="/Home" element={<Home />} />
-              <Route path="/UploadView" element={<UploadView />} />
-            </Route>
-          </Routes>
-        </Fragment>
-      </BrowserRouter>
-    );
-  }
+  // if (user) {
+  //   return (
+  //     <BrowserRouter>
+  //       <Fragment>
+  //         <Routes>
+  //           <Route path="/" element={<PrivateRoute />}>
+  //             <Route path="/Home" element={<Home />} />
+  //             <Route path="/UploadView" element={<UploadView />} />
+  //           </Route>
+  //         </Routes>
+  //       </Fragment>
+  //     </BrowserRouter>
+  //   );
+  // }
+   if (user) {
+    return <Home />;
+    console.log("aaa");
+   }
 
-  return <Login />;
+  /// console.log("bbb");
+    return <Login />;
 }
