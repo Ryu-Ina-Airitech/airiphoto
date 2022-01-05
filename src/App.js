@@ -4,6 +4,7 @@ import Amplify from "aws-amplify";
 
 import { Home } from "./Home";
 import { Login } from "./Login";
+import { Profile } from "./Profile";
 import "./styles.css";
 // import { Navigate, Outlet } from "react-router-dom";
 import awsExports from "./aws-exports";
@@ -32,12 +33,13 @@ export default function App() {
             {/* <Route path="/" element={<PrivateRoute />}> */}
             <Route path="/Home" element={<Home />} />
             <Route path="/UploadView" element={<UploadView />} />
+            {/* <Route path="/Login" element={<Login />} /> */}
+            <Route path="/Profile" element={<Profile />} />
             {/* </Route> */}
           </Routes>
         </Fragment>
       </BrowserRouter>
     );
   }
-
   return <Login />;
 }
