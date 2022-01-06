@@ -28,3 +28,17 @@ export default function App() {
 //   // If not, return element that will navigate to login page
 //   return auth ? <Outlet /> : <Navigate to="/" />;
 // };
+
+/* <BrowserRouter>
+        <Fragment>
+          <Home />
+          <Routes>
+            <Route path="/" element={<PrivateRoute />}>
+            <Route path="/Home" element={<Home />} />
+            <Route path="/UploadView" element={<UploadView />} />
+            <Route path="/Login" element={<Login />} />
+            <Route path="/Profile" element={<Profile />} />
+            </Route>
+          </Routes>
+        </Fragment>
+      </BrowserRouter> */

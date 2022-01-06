@@ -1,9 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ProfileEditor } from "./ProfileEditor";
+import { Flex } from "react-router-dom";
+// import { ProfileEditor } from "./ProfileEditor";
 
 export function Profile() {
   return (
-    <BrowserRouter>
+    <Flex>
       <div className="container rounded bg-light mt-5 mb-5">
         <div className="row">
           <div className="col-md-5 border-right">
@@ -74,11 +74,6 @@ export function Profile() {
           </div>
         </div>
       </div>
-      <Routes>
-        <Route path="/ProfileEditor">
-          <ProfileEditor />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    </Flex>
   );
 }

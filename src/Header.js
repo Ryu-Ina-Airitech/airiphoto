@@ -20,13 +20,12 @@ export function Header() {
       alignItems="center"
       backgroundColor="#F5F5F5"
     >
-      <View padding="1rem">
+      <View padding="1rem" onClick={ClicktoHome}>
         <img
           src="https://c.pxhere.com/images/7e/83/9874c16b50d549e89d9fc4bbb60f-1448913.jpg!d"
           alt="Logo"
           width={100}
           height={60}
-          onClick={ClicktoHome}
         />
       </View>
       <View padding="1rem">
