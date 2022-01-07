@@ -7,12 +7,11 @@ export function Header() {
   const navigate = useNavigate();
 
   const ClicktoHome = () => {
-    navigate.push("./Home");
+    navigate("/Home");
   };
   const ClicktoProfile = () => {
-    navigate.push("./Profile");
+    navigate("/Profile");
   };
-  // const ClicktoProfile = useCallback(() => navigate.push("./Profile"), []);
 
   return (
     <Flex
@@ -20,10 +19,11 @@ export function Header() {
       alignItems="center"
       backgroundColor="#F5F5F5"
     >
-      <View padding="1rem" onClick={ClicktoHome}>
+      <View padding="1rem">
         <img
           src="https://c.pxhere.com/images/7e/83/9874c16b50d549e89d9fc4bbb60f-1448913.jpg!d"
           alt="Logo"
+          onClick={ClicktoHome}
           width={100}
           height={60}
         />

@@ -1,3 +1,4 @@
+import React, { Fragment } from "react";
 import {
   Authenticator,
   Flex,
@@ -10,10 +11,9 @@ import {
 import { Footer } from "./Footer";
 import { SignInHeader } from "./SignInHeader";
 import { SignInFooter } from "./SignInFooter";
-import Home from "./Home";
+import { Navigate } from "react-router-dom";
 
 const components = {
-  // Header,
   SignIn: {
     Header: SignInHeader,
     Footer: SignInFooter,
@@ -39,7 +39,12 @@ export function Login() {
         justifyContent="center"
       >
         <Authenticator components={components}>
-          {({ signOut, user }) => <Home />}
+          {({ signOut, user }) => (
+            <Fragment>
+              <h1>Hello {user.attributes.email}</h1>
+              <Navigate to="/Home" />
+            </Fragment>
+          )}
         </Authenticator>
       </Flex>
     </Grid>
