@@ -6,6 +6,7 @@ import Amplify from "aws-amplify";
 import Home from "./Home";
 import { Login } from "./Login";
 import { Profile } from "./Profile";
+import { ProfileEditor } from "./ProfileEditor";
 
 import "./styles.css";
 
@@ -25,6 +26,7 @@ export default function App() {
           {/* <Route path="/UploadView" element={<UploadView />} /> */}
           <Route exact path="/Login" element={<Login />} />
           <Route exact path="/Profile" element={<Profile />} />
+          <Route exact path="/ProfileEditor" element={<ProfileEditor />} />
           {/* </Route> */}
         </Routes>
       </Fragment>

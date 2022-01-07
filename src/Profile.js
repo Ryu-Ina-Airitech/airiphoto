@@ -31,7 +31,7 @@ export function Profile() {
       <View>
         <Grid templateColumns={"auto"}>
           <Flex justifyContent="flex-start" alignItems="center" gap="7rem">
-            <h1 className="text-right">My Profile</h1>
+            <h1>My Profile</h1>
             <Button
               backgroundColor="#3A6BA5"
               color="white"
@@ -40,31 +40,23 @@ export function Profile() {
               編 集
             </Button>
           </Flex>
-          <div className="row mt-2">
-            <div className="col-md-6">
-              <label className="labels">UserName</label>
-              <h2 className="font-weight-bold m-3" value id="userName">
-                AiueOk
-              </h2>
+          <div>
+            <label>UserName</label>
+            <h2>AiueOk</h2>
+          </div>
+          <div>
+            <div>
+              <label>Email Address</label>
+              <h2>aiueok@mail.com.my</h2>
+            </div>
+            <div>
+              <label>Birth Date</label>
+              <h2>2000/01/01</h2>
             </div>
           </div>
-          <div className="row mt-2">
-            <div className="col-md-12">
-              <label className="labels">Email Address</label>
-              <h2 className="font-weight-bold m-3" value id="emailAddress">
-                aiueok@mail.com.my
-              </h2>
-            </div>
-            <div className="col-md-12">
-              <label className="labels">Birth Date</label>
-              <h2 className="font-weight-bold m-3" value id="birthDate">
-                2000/01/01
-              </h2>
-            </div>
-          </div>
-          <div className="row mt-3">
-            <label className="labels">Biography</label>
-            <h2 className="font-weight-bold m-3" value id="biography" rows={5}>
+          <div>
+            <label>Biography</label>
+            <h2 rows={5}>
               ・朝は起きてすぐ顔を洗います
               <br />
               ・昼はラーメンと餃子を食べます
@@ -73,7 +65,6 @@ export function Profile() {
               <br />
             </h2>
           </div>
-          <div className="mt-5 text-center"></div>
         </Grid>
       </View>
     </Grid>
