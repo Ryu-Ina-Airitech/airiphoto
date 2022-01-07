@@ -4,6 +4,7 @@ import os
 from flask_cors import CORS
 from flask import Flask, json, jsonify, request
 from uuid import uuid4
+from boto3.dynamodb.conditions import Key, Attr
 
 BASE_ROUTE = "/image"
 
@@ -12,6 +13,8 @@ TABLE = os.environ.get("STORAGE_IMAGESTORAGE_NAME")
 # IMAGE_TAG_TABLE = os.environ.get("STORAGE_IMAGEINFOTAGSSTORAGE_NAME")
 
 client = boto3.client('dynamodb')
+resource = boto3.resource('dynamodb')
+res_table = resource.Table(TABLE)
 app = Flask(__name__)
 CORS(app)
 
@@ -42,9 +45,15 @@ def register_imageinfo():
 @app.route(BASE_ROUTE + '/<image_id>/get', methods=['GET'])
 # 画像詳細取得処処理
 def get_imagedetails(image_id):
-    image = client.get_item(TableName=TABLE, Key={
-        'img_id': {'S': image_id}})
-    return jsonify(data=image)
+    # image = res_table.get_item(Key={
+    #     'img_id': {'S': image_id}})
+    # return jsonify(data=image)
+    response = res_table.get_item(Key={'img_id': image_id})
+    return jsonify(data=response['Item'])
+    # return response['Item']
+    # image = client.get_item(TableName=TABLE, Key={
+    #     'img_id': {'S': image_id}})
+    # return jsonify(data=image)
 
 
 @app.route(BASE_ROUTE + '/<image_id>/delete', methods=['DELETE'])
@@ -100,7 +109,22 @@ def update_imageinfo(image_id):
 @app.route(BASE_ROUTE + '/imagelist', methods=['GET'])
 # 画像情報リスト取得
 def list_images():
-    return jsonify(data=client.scan(TableName=TABLE))
+     result = res_table.scan()
+     result['Items']
+     print(result)
+     return jsonify(data=result)
+
+    # return jsonify(data=client.scan(TableName=TABLE))
+
+@app.route(BASE_ROUTE + '/<image_name>/search', methods=['GET'])
+# 画像情報検索
+def search_images(image_name):
+     result = res_table.scan(FilterExpression=Attr('img_name').contains(image_name))
+     result['Items']
+     print(result)
+     return jsonify(data=result)
+
+    # return jsonify(data=client.scan(TableName=TABLE))
 
 
 def handler(event, context):

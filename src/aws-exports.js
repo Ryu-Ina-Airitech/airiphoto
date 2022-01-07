@@ -52,9 +52,9 @@ const awsmobile = {
     "aws_cognito_verification_mechanisms": [
         "EMAIL"
     ],
-    "aws_content_delivery_bucket": "hostingeem-deveieimon",
+    "aws_content_delivery_bucket": "photostock-hosting-deveieimon",
     "aws_content_delivery_bucket_region": "ap-northeast-1",
-    "aws_content_delivery_url": "https://d1bttakzspk9qb.cloudfront.net"
+    "aws_content_delivery_url": "http://photostock-hosting-deveieimon.s3-website-ap-northeast-1.amazonaws.com"
 };
 
 

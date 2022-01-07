@@ -18,7 +18,11 @@
         {
           "category": "storage",
           "resourceName": "UserStorage",
-          "attributes": ["Name", "Arn", "StreamArn"]
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ]
         }
       ]
     },
@@ -30,22 +34,38 @@
         {
           "category": "storage",
           "resourceName": "UserStorage",
-          "attributes": ["Name", "Arn", "StreamArn"]
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ]
         },
         {
           "category": "storage",
           "resourceName": "ImageStorage",
-          "attributes": ["Name", "Arn", "StreamArn"]
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ]
         },
         {
           "category": "storage",
           "resourceName": "ImageInfoTagsStorage",
-          "attributes": ["Name", "Arn", "StreamArn"]
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ]
         },
         {
           "category": "storage",
           "resourceName": "TagsStorage",
-          "attributes": ["Name", "Arn", "StreamArn"]
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ]
         }
       ]
     },
@@ -57,22 +77,38 @@
         {
           "category": "storage",
           "resourceName": "UserStorage",
-          "attributes": ["Name", "Arn", "StreamArn"]
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ]
         },
         {
           "category": "storage",
           "resourceName": "ImageStorage",
-          "attributes": ["Name", "Arn", "StreamArn"]
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ]
         },
         {
           "category": "storage",
           "resourceName": "ImageInfoTagsStorage",
-          "attributes": ["Name", "Arn", "StreamArn"]
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ]
         },
         {
           "category": "storage",
           "resourceName": "TagsStorage",
-          "attributes": ["Name", "Arn", "StreamArn"]
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ]
         }
       ]
     },
@@ -84,22 +120,38 @@
         {
           "category": "storage",
           "resourceName": "UserStorage",
-          "attributes": ["Name", "Arn", "StreamArn"]
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ]
         },
         {
           "category": "storage",
           "resourceName": "ImageStorage",
-          "attributes": ["Name", "Arn", "StreamArn"]
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ]
         },
         {
           "category": "storage",
           "resourceName": "ImageInfoTagsStorage",
-          "attributes": ["Name", "Arn", "StreamArn"]
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ]
         },
         {
           "category": "storage",
           "resourceName": "TagsStorage",
-          "attributes": ["Name", "Arn", "StreamArn"]
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ]
         }
       ]
     }
@@ -127,22 +179,34 @@
       {
         "category": "function",
         "resourceName": "UserOperationApiFunction",
-        "attributes": ["Name", "Arn"]
+        "attributes": [
+          "Name",
+          "Arn"
+        ]
       },
       {
         "category": "function",
         "resourceName": "ImageOperationApiFunction",
-        "attributes": ["Name", "Arn"]
+        "attributes": [
+          "Name",
+          "Arn"
+        ]
       },
       {
         "category": "function",
         "resourceName": "ImageTagsNameOperationApiFunction",
-        "attributes": ["Name", "Arn"]
+        "attributes": [
+          "Name",
+          "Arn"
+        ]
       },
       {
         "category": "function",
         "resourceName": "ImageInfoTagOperationApiFunction",
-        "attributes": ["Name", "Arn"]
+        "attributes": [
+          "Name",
+          "Arn"
+        ]
       }
     ]
   },
@@ -201,6 +265,12 @@
     },
     "TagsStorage": {
       "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    }
+  },
+  "hosting": {
+    "S3AndCloudFront": {
+      "service": "S3AndCloudFront",
       "providerPlugin": "awscloudformation"
     }
   }

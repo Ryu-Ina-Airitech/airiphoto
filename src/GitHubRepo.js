@@ -32,11 +32,12 @@ class GitHubRepo extends React.Component {
     return (
       <Card className={classes.card}>
         <CardHeader
-          title={this.props.repo.full_name}
+          title={this.props.repo.img_name}
         />
         <CardContent>
           <Typography component="p" style={{minHeight: '90px', overflow: 'scroll'}}>
-            {this.props.repo.description}
+            {/* {this.props.repo.img_name} */}
+            <img src={this.props.repo.img_path} alt= {this.props.repo.img_name} style={{width: 200, height:200, marginLeft: 10}} key={this.props.repo.img_id} />
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>

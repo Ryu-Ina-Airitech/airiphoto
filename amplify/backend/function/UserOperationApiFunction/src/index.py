@@ -9,6 +9,8 @@ BASE_ROUTE = "/user"
 
 TABLE = os.environ.get("STORAGE_USERSTORAGE_NAME")
 client = boto3.client('dynamodb')
+resource = boto3.resource('dynamodb')
+res_table = resource.Table(TABLE)
 app = Flask(__name__)
 CORS(app)
 
@@ -33,9 +35,11 @@ def create_user():
 @app.route(BASE_ROUTE + '/<user_id>/get', methods=['GET'])
 # ユーザー情報取得処理
 def get_user(user_id):
-    user = client.get_item(TableName=TABLE, Key={
-                           'user_id': {'S': user_id}})
-    return jsonify(data=user)
+    # user = client.get_item(TableName=TABLE, Key={
+    #                        'user_id': {'S': user_id}})
+    # return jsonify(data=user)
+    response = res_table.get_item(Key={'user_id': user_id})
+    return jsonify(data=response)
 
 
 @app.route(BASE_ROUTE + '/<user_id>/delete', methods=['DELETE'])

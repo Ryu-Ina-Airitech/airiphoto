@@ -110,19 +110,19 @@
       "function": {
         "UserOperationApiFunction": {
           "deploymentBucketName": "amplify-airiphoto-deveieimon-233626-deployment",
-          "s3Key": "amplify-builds/UserOperationApiFunction-306b31746b4379377141-build.zip"
+          "s3Key": "amplify-builds/UserOperationApiFunction-4e33474e487538655a75-build.zip"
         },
         "ImageOperationApiFunction": {
           "deploymentBucketName": "amplify-airiphoto-deveieimon-233626-deployment",
-          "s3Key": "amplify-builds/ImageOperationApiFunction-76517a6e45444f6e7551-build.zip"
+          "s3Key": "amplify-builds/ImageOperationApiFunction-5a334974735638457243-build.zip"
         },
         "ImageTagsNameOperationApiFunction": {
           "deploymentBucketName": "amplify-airiphoto-deveieimon-233626-deployment",
-          "s3Key": "amplify-builds/ImageTagsNameOperationApiFunction-6a5167466f394141506b-build.zip"
+          "s3Key": "amplify-builds/ImageTagsNameOperationApiFunction-333659396b4131733635-build.zip"
         },
         "ImageInfoTagOperationApiFunction": {
           "deploymentBucketName": "amplify-airiphoto-deveieimon-233626-deployment",
-          "s3Key": "amplify-builds/ImageInfoTagOperationApiFunction-536d4a2f6531727a7962-build.zip"
+          "s3Key": "amplify-builds/ImageInfoTagOperationApiFunction-4f66744274584f336d64-build.zip"
         }
       }
     }
