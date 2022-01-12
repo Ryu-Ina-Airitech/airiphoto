@@ -10,6 +10,12 @@ import { Login } from "./Login";
 
 import Amplify from "aws-amplify";
 import awsExports from "./aws-exports";
+
+//awsExports.oauth.redirectSignIn = 'http://localhost:3000/home/';
+// awsExports.oauth.redirectSignOut = 'http://localhost:3000/';
+awsExports.oauth.redirectSignIn = `${window.location.origin}/`;
+awsExports.oauth.redirectSignOut = `${window.location.origin}/`;
+
 Amplify.configure(awsExports);
 
 const rootElement = document.getElementById("root");
