@@ -65,6 +65,8 @@ export function DBTest() {
       // const data = await API.post("photostockapi", "/image/register", {
       //   body: {
       //     user_id: "9b20b3f6-1a18-43dc-a110-1cc901b8a788",
+      //     img_key: "",
+      //     bucket_name: "",
       //     img_name: "nature.png",
       //     img_path: "C:UsersEi Ei MonDesktopAiriPhoto\nature.png",
       //     img_size: "1026",

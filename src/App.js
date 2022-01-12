@@ -32,6 +32,8 @@ export default function App() {
   //     const data = await API.post("photostockapi", "/image/register", {
   //         body: {
   //           user_id: "eieimon",
+  //           img_key: "k001",
+  //           bucket_name:"s3_bucket",
   //           img_name: "human.jpg",
   //           img_path: "/human.jpg",
   //           img_size: "1026",
