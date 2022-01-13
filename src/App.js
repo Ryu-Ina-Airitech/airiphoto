@@ -7,6 +7,7 @@ import Home from "./Home";
 import { Login } from "./Login";
 import { Profile } from "./Profile";
 import { ProfileEditor } from "./ProfileEditor";
+import ImageDetails from "./ImageDetails";
 
 import "./styles.css";
 
@@ -14,25 +15,34 @@ import awsExports from "./aws-exports";
 
 Amplify.configure(awsExports);
 
-export default function App() {
-  const { user } = useAuthenticator();
+const PrivateRoute = () => {
+  const {user} = useAuthenticator(); // determine if authorized, from context or however you're doing it
 
-  if (user) {
+  // If authorized, return an outlet that will render child elements
+  // If not, return element that will navigate to login page
+  return user ? <Home />:<Login />;
+};
+
+export default function App() {
+ // const { user } = useAuthenticator();
+
+ // if (user) {
     return (
       <Fragment>
         <Routes>
-          {/* <Route path="/" element={<PrivateRoute />}> */}
-          <Route exact path="/Home" element={<Home />} />
+        <Route exact path='/' element={<PrivateRoute/>} />
+        <Route exact path='/home' element={<Home/>} />
           {/* <Route path="/UploadView" element={<UploadView />} /> */}
           <Route exact path="/Login" element={<Login />} />
           <Route exact path="/Profile" element={<Profile />} />
           <Route exact path="/ProfileEditor" element={<ProfileEditor />} />
+          <Route exact path='/imagedetails/:id' element={<ImageDetails/>} />
           {/* </Route> */}
         </Routes>
       </Fragment>
     );
-  }
-  return <Login />;
+ // }
+ // return <Login />;
 }
 
 // import { Navigate, Outlet } from "react-router-dom";
