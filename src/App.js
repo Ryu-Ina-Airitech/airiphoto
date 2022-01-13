@@ -9,6 +9,7 @@ import { Navigate, Outlet } from "react-router-dom";
 import awsExports from "./aws-exports";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { UploadView } from "./uploadView";
+import { PhotoUpload } from "./PhotoUpload";
 
 Amplify.configure(awsExports);
 
@@ -31,6 +32,7 @@ export default function App() {
             <Route path="/" element={<PrivateRoute />}>
               <Route path="/Home" element={<Home />} />
               <Route path="/UploadView" element={<UploadView />} />
+              <Route path="/PhotoUpload" element={<PhotoUpload />} />
             </Route>
           </Routes>
         </Fragment>
