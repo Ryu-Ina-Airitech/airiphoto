@@ -13,6 +13,10 @@ export function Header() {
     navigate("/Profile");
   };
 
+  const ClicktoUpload = () => {
+    navigate("/PhotoUpload");
+  };
+
   return (
     <Flex
       justifyContent="space-between"
@@ -40,10 +44,12 @@ export function Header() {
           <Menu>
             <MenuItem onClick={ClicktoProfile}>プロフィール</MenuItem>
             <MenuItem>お気に入り画像</MenuItem>
-            <MenuItem>アップロード</MenuItem>
+            <MenuItem onClick={ClicktoUpload}>アップロード</MenuItem>
             <MenuItem>自分の画像</MenuItem>
             <MenuItem>ヘルプ</MenuItem>
             <MenuItem onClick={signOut}>ログアウト</MenuItem>
+
+            
           </Menu>
         </Grid>
       </View>
