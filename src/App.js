@@ -8,6 +8,7 @@ import { Login } from "./Login";
 import { Profile } from "./Profile";
 import { ProfileEditor } from "./ProfileEditor";
 import ImageDetails from "./ImageDetails";
+import { PhotoUpload } from "./PhotoUpload";
 
 import "./styles.css";
 
@@ -37,6 +38,7 @@ export default function App() {
           <Route exact path="/Profile" element={<Profile />} />
           <Route exact path="/ProfileEditor" element={<ProfileEditor />} />
           <Route exact path='/imagedetails/:id' element={<ImageDetails/>} />
+          <Route path="/PhotoUpload" element={<PhotoUpload />} />
           {/* </Route> */}
         </Routes>
       </Fragment>
