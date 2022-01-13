@@ -11,7 +11,7 @@ import {
 import { Footer } from "./Footer";
 import { SignInHeader } from "./SignInHeader";
 import { SignInFooter } from "./SignInFooter";
-import { Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const components = {
   SignIn: {
@@ -42,7 +42,8 @@ export function Login() {
           {({ signOut, user }) => (
             <Fragment>
               <h1>Hello {user.attributes.email}</h1>
-              <Navigate to="/Home" />
+              <Link to={`/Home`}>GotoHome</Link>
+              {/* <Navigate to="/Home" /> */}
             </Fragment>
           )}
         </Authenticator>
